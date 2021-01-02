@@ -1,0 +1,5 @@
+{
+  "secret": "someSecret",
+  "audience": "someAudience",
+  "issuer": "someIssuer"
+}

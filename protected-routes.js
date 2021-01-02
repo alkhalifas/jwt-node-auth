@@ -1,7 +1,7 @@
 var express = require('express'),
     jwt     = require('express-jwt'),
     config  = require('./config'),
-    quoter  = require('./quoter');
+    stater  = require('./stater');
 
 var app = module.exports = express.Router();
 
@@ -27,5 +27,5 @@ function requireScope(scope) {
 app.use('/api/protected', jwtCheck, requireScope('full_access'));
 
 app.get('/api/protected/random-quote', function(req, res) {
-    res.status(200).send(quoter.getRandomOne());
+    res.status(200).send(stater.getRandomOne());
 });

@@ -1,7 +1,7 @@
-var quotes = require('./quotes.json');
+const statements = require('./statements.json');
 
 exports.getRandomOne = function() {
-    var totalAmount = quotes.length;
-    var rand = Math.floor(Math.random() * totalAmount);
-    return quotes[rand];
+    const totalAmount = statements.length;
+    const rand = Math.floor(Math.random() * totalAmount);
+    return statements[rand];
 }
